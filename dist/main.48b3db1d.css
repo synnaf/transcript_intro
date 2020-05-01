@@ -1,0 +1,34 @@
+body {
+  font-family: sans-serif;
+}
+body h1 {
+  font-size: 54pt;
+  text-align: center;
+}
+body #movie-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+body #movie-container .movielist {
+  flex: 0 1 30%;
+  background-color: orangered;
+  box-shadow: 2px 8px 10px #888888;
+  text-align: center;
+  margin-bottom: 40px;
+}
+body #movie-container .movielist h2 {
+  font-size: 18pt;
+  padding: 15px;
+  border-bottom: 2px solid black;
+  width: 90%;
+  text-align: left;
+}
+body #movie-container .movielist img {
+  width: 90%;
+}
+body #movie-container .movielist p {
+  font-size: 12pt;
+}
+
+/*# sourceMappingURL=/main.48b3db1d.css.map */
