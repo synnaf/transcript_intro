@@ -8,5 +8,4 @@ export interface IService {
     //vi vill att den returnerar ett promise-objekt!
     getData(): Promise<Movie[]>; 
 
-
 }
