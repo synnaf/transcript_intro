@@ -1,6 +1,6 @@
 export class Movie {
-    id: String; 
-    title: String;
-    releaseYear: Number; 
-    poster: String; 
+    id: string; 
+    title: string;
+    releaseYear: number; 
+    poster: string; 
 }; 

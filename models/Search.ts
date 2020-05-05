@@ -41,6 +41,7 @@ export class Search implements IService {
         }); 
 
         //vi skickar tillbaka hela movies-objektet 
+        (<HTMLInputElement>document.getElementById("user-search")).value = "";
         return movies; 
     }
 }

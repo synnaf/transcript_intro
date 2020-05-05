@@ -533,6 +533,7 @@ function () {
               return newMovie;
             }); //vi skickar tillbaka hela movies-objektet 
 
+            document.getElementById("user-search").value = "";
             return [2
             /*return*/
             , movies];
@@ -726,38 +727,11 @@ function () {
 
   Main.prototype.start = function (service) {
     return __awaiter(this, void 0, void 0, function () {
-      var movieList;
       return __generator(this, function (_a) {
-        switch (_a.label) {
-          case 0:
-            console.log("Starting operation");
-            return [4
-            /*yield*/
-            , service.getData()];
-
-          case 1:
-            movieList = _a.sent();
-            console.log(movieList); //för varje objekt i listan vill vi skapa upp en ny div 
-
-            movieList.forEach(function (mObject) {
-              var container = document.getElementById("movie-container");
-              var newText = document.createElement("div");
-              newText.setAttribute("class", "movielist");
-              container.appendChild(newText);
-              var movietitle = document.createElement("h2");
-              movietitle.innerHTML = mObject.title;
-              newText.appendChild(movietitle);
-              var movieYear = document.createElement("p");
-              movieYear.innerHTML = "It was released: " + mObject.releaseYear;
-              newText.appendChild(movieYear);
-              var poster = document.createElement("img");
-              poster.src = mObject.poster;
-              newText.appendChild(poster);
-            });
-            return [2
-            /*return*/
-            ];
-        }
+        console.log("Starting operation");
+        return [2
+        /*return*/
+        ];
       });
     });
   };
@@ -784,8 +758,8 @@ function () {
           case 1:
             movieList = _a.sent();
             console.log(movieList); //hit funkar det! 
-            //problemet nu är att den 
-            //för varje objekt i listan vill vi skapa upp en ny div 
+            //problemet nu är att den inte vet vad den ska göra när den returnerar 0 
+            //för varje objekt i listan vill vi ersätta de gamla divvarna!
 
             movieList.forEach(function (mObject) {
               var container = document.getElementById("movie-container");
@@ -812,7 +786,7 @@ function () {
 
   return SearchC;
 }();
-},{"../models/Service":"models/Service.ts","../models/Search":"models/Search.ts"}],"../../../../.npm/_npx/1078/lib/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"../models/Service":"models/Service.ts","../models/Search":"models/Search.ts"}],"../../../../.npm/_npx/11228/lib/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -840,7 +814,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50088" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61612" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -1016,5 +990,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../.npm/_npx/1078/lib/node_modules/parcel/src/builtins/hmr-runtime.js","ts/main.ts"], null)
+},{}]},{},["../../../../.npm/_npx/11228/lib/node_modules/parcel/src/builtins/hmr-runtime.js","ts/main.ts"], null)
 //# sourceMappingURL=/main.0e24b174.js.map
